@@ -21,16 +21,16 @@ int main()
         printf("Address of malloced mem child = %p and value is %d\n", p, *p);
     }
 
-    if (fid == 0)
-    {
-        for (i = 0; i < 5; i += 2)
-        {
-            sum = sum + (i);
-        }
-        printf("Parent fid: %d\n", fid);
-        printf("Parent sum: %d\n", sum);
-        printf("Address of malloced mem child = %p and value is %d\n", p, *p);
-    }
+    // if (fid == 0)
+    // {
+    //     for (i = 0; i < 5; i += 2)
+    //     {
+    //         sum = sum + (i);
+    //     }
+    //     printf("Parent fid: %d\n", fid);
+    //     printf("Parent sum: %d\n", sum);
+    //     printf("Address of malloced mem child = %p and value is %d\n", p, *p);
+    // }
 
     if (fid == 0)
     {

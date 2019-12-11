@@ -7,16 +7,16 @@ int counter=0;
 pthread_mutex_t mutex1 =PTHREAD_MUTEX_INITIALIZER;
 
 void* child(){
-    for (int i=0;i<3;i++){
         pthread_mutex_lock(&mutex1); //上鎖
+    for (int i=0;i<3;i++){
         int tmp = counter;
         sleep(1);
         counter=tmp+1;
         printf("counter=%d\n",counter);
-        pthread_mutex_unlock(&mutex1);//解鎖
         printf("pthread_self: %lu \n", pthread_self());
         // printf("process id: %d\n", getpid());
     }
+        pthread_mutex_unlock(&mutex1);//解鎖
     pthread_exit(NULL);
 }
 int main(){

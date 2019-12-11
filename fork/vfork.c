@@ -10,6 +10,7 @@ int main(int argc, char **argv)
     int v;
 
     v = vfork();
+    
     if (v == 0)
     {
         // a = 10
